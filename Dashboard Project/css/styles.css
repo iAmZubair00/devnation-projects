@@ -1,0 +1,256 @@
+*,
+*::before,
+*::after{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+:root {
+    --orange: #ffa067;
+    --purple: #5843be;
+    --red: #fe7066;
+    /* --borderRadius: 10px;
+    --border: 0.5px solid lightgrey; */
+}
+.title {
+    font-weight: 500;
+    color: #222;
+}
+.logo{
+    color: var(--orange);
+    box-shadow: 2px 2px 2px rgba(0,0,0,0.2);
+}
+
+.subTitle {
+    font-weight: 400;
+    font-size: 0.9em;
+    color: #b9c2d1;
+}
+
+.largeTitle {
+    font-size: 2em;
+    font-weight: 500;
+}
+.main-container{
+    display: grid;
+    grid-template-columns: 0.7fr 10fr 3.3fr;
+}
+.sidebar{
+    display: grid;
+    grid-template-rows: repeat(8,1fr);
+    background-color: #f1f3f6;
+    text-align: center;
+    justify-content: center;
+}
+.sidebar .logo{
+    grid-row: 1/3;
+    height: 3rem;
+    width: 3rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 3rem;
+}
+.sidebar .icons-sb{
+    grid-row: 3/7;
+    justify-content: center;
+}
+.progress-dashb{
+    display: grid;
+    grid-template-columns: repeat(4,25%);
+    grid-template-rows: 6rem 12rem 10rem 6rem 4rem;    
+    grid-gap: 2rem 1rem;
+    margin: 0 3rem 8rem;
+}
+.progress-dashb > div{
+    padding: 1rem;
+    border-radius: 10px;
+}
+.progress-dashb > h1{
+    grid-column: 1/5;
+    align-self: end;
+}
+.progress-dashb .exam{
+    background-color: var(--purple);
+    grid-column: 1/3;
+    line-height: 2rem;
+}
+.progress-dashb .exam h1.largeTitle{
+    color: white;
+}
+.end-ex{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+.start-ex .time{
+    color:white;
+}
+.end-ex img{
+    margin-top: 0.7rem;
+}
+.end-ex a{
+    color: white;
+}
+.progress-dashb .homework{
+    background-color: #ffeee6;
+    grid-column: 3/4;
+    color: var(--orange);
+    line-height: 2rem;
+}
+.progress-dashb .reading{
+    background-color: #f1f3f6;
+    grid-column: 4/5;
+    color: var(--purple);
+    line-height: 2rem;
+}
+.progress-dashb .group-info{
+    grid-column: 1/3;
+    grid-row: 3/5;
+    line-height: 1.5rem;
+    box-shadow: 3px 3px 8px rgba(0,0,0,0.2), -3px -3px 8px rgba(0,0,0,0.2);
+}
+.progress-dashb .group-info div{
+    margin-bottom: 1rem;
+}
+.group-info .info-top{
+    display: grid;
+    grid-template-columns: 5fr 1fr;
+    grid-template-rows: repeat(2,50%);
+}
+.group-info .info-middle{
+    display: grid;
+    grid-template-columns: 4fr 1fr;
+    grid-template-rows: 1fr 0.2fr 1fr;
+    padding: 1.5rem 1rem;
+    border-radius: 5px;
+}
+.group-info .info-middle *{
+    color: white;
+}
+.group-info .info-middle h2{
+    align-self: end;
+}
+.group-info .info-middle p{
+    grid-column: 1/2;
+    grid-row: 3/4;
+}
+.group-info .info-middle img{
+    grid-row: 2/3;
+    grid-column: 2/3;
+    justify-self: center;
+}
+.info-top img,.info-bottom h2:nth-of-type(2){
+    justify-self: end;
+}
+.group-info .info-bottom{
+    display: grid;
+    grid-template-columns: 5fr 1fr;
+    grid-template-rows: repeat(2,50%);
+}
+.progress-dashb .course{
+    grid-column: 3/5;
+    grid-row: 3/5;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: flex-start;
+}
+.progress-dashb .course h1{
+    grid-column: 3/5;
+    grid-row: 3/5;
+}
+.progress-dashb .course img{
+    width: 3em;
+}
+progress {
+    border: none;
+    height: 8px;
+}
+
+progress::-webkit-progress-value {
+    background-color: var(--orange);
+    border-radius: 8px;
+}
+
+progress::-webkit-progress-bar {
+    background-color: whitesmoke;
+    border-radius: 8px;
+}
+.progress-dashb .grammar{
+    grid-column: 1/3;
+    grid-row: 5/6;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    border: 1px solid lightgrey;
+    width: 85%;
+    
+}
+.progress-dashb .dictionary{
+    grid-column: 3/5;
+    grid-row: 5/6;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    border: 1px solid lightgrey;
+    transform: translateX(-3rem);
+    width: 85%;
+}
+.group-info .info-middle{
+    background-color: var(--orange);
+}
+.icons-sb{
+    display: grid;
+    grid-template-rows: repeat(4, 20%);
+}
+.profile-dashb{
+    display: grid;
+    grid-template-rows: 1fr 0.5fr 1.5fr;
+    background-color: #f1f3f6;
+    padding: 0.5rem 2rem;
+}
+.profile-dashb .intro{
+    display: grid;
+    grid-template-rows: 6fr 1fr 1fr;
+    justify-content: center;
+    text-align: center;
+}
+.profile-dashb .intro img{
+    border-radius: 60%;
+}
+.profile-dashb .offer{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    border: 1px solid lightgrey;
+    padding: 20px;
+    margin: 3rem 0;
+    border-radius: 5px;
+}
+.profile-dashb .offer img{
+    padding: 15px 12px;
+}
+.courses-progress .largeTitle{
+    margin-bottom: 1rem;
+}
+.profile-dashb .courses-progress div{
+    display: grid;
+    grid-template-columns: 1fr 1fr 4fr;
+    grid-gap: 0.5rem;
+    border: 1px solid lightgrey;
+    border-radius: 5px;
+    margin-bottom: 1.2rem;
+    padding: 0.9rem;
+}
+.courses-progress .grammar .percent{
+    color: var(--purple);
+}
+
+
+.courses-progress .reading .percent{
+    color: var(--red);  
+}
+.courses-progress .dictionary .percent{
+    color: var(--orange); 
+}
