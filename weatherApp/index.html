@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Weather Widget</title>
+    <style>
+      *,
+      *::before,
+      *::after {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      main {
+        height: 100vh;
+        background-image: url("https://images.pexels.com/photos/1118873/pexels-photo-1118873.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500");
+        background-repeat: no-repeat;
+        background-size: cover;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .weatherContainer {
+        background-color: rgba(135, 206, 235, 0.3);
+        width: 40vw;
+        height: 40vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+      }
+      .wIcon img {
+        width: 40px;
+      }
+      #search,
+      .locationInput {
+        padding: 8px;
+        border-radius: 2px;
+        border: none;
+      }
+      #search {
+        background-color: skyblue;
+        color: blue;
+        cursor: pointer;
+      }
+      .output {
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        font-size: 1.5rem;
+        width: 100%;
+        color: navajowhite;
+      }
+      .info {
+        color: orange;
+        font-size: 1.2rem;
+      }
+    </style>
+  </head>
+  <body>
+    <main class="container">
+      <div class="weatherContainer">
+        <div class="input">
+          <input type="text" class="locationInput" />
+          <button id="search">Get Weather</button>
+        </div>
+        <div class="output">
+          <div class="wIcon">
+            <img />
+          </div>
+          <div class="wStats">
+            <p class="temperature"></p>
+            <p class="desc"></p>
+          </div>
+        </div>
+        <p class="info">Type city above and press button to get Weather!</p>
+      </div>
+    </main>
+    <script src="index.js"></script>
+  </body>
+</html>
