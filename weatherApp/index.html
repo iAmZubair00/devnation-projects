@@ -33,7 +33,10 @@
         align-items: center;
       }
       .wIcon img {
-        width: 40px;
+        width: 70px;
+        /* background-color: #1e213a;
+        background-color: skyblue;
+        border-radius: 50%; */
       }
       #search,
       .locationInput {
@@ -58,6 +61,11 @@
         color: orange;
         font-size: 1.2rem;
       }
+      .request-status {
+        display: none;
+        font-size: 1.2rem;
+        color: #cfc;
+      }
     </style>
   </head>
   <body>
@@ -67,6 +75,7 @@
           <input type="text" class="locationInput" />
           <button id="search">Get Weather</button>
         </div>
+        <div class="request-status">Fetching data for your City........</div>
         <div class="output">
           <div class="wIcon">
             <img />
